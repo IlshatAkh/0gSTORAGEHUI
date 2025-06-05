@@ -52,3 +52,4 @@ sed -i "s|^network_enr_address = \".*\"|network_enr_address = \"$(curl -s 2ip.ru
 sed -i "s|^blockchain_rpc_endpoint = \".*\"| blockchain_rpc_endpoint = \"${RPC}\"|" /root/0g-storage-node/run/config-testnet-turbo.toml
 sed -i "s|^miner_key = \".*\"|miner_key = \"${KEY}\"|" /root/0g-storage-node/run/config-testnet-turbo.toml
 systemctl daemon-reload && systemctl enable zgstorage && systemctl start zgstorage
+tmux kill-session -t STORAGE_ZAP
