@@ -43,6 +43,10 @@ git stash
 git fetch --all --tags
 git checkout v1.0.0
 git submodule update –init
+cd
+mkdir -p /root/0g-storage-node/run/db/
+wget http://195.201.198.8:12385/storage_snap.tar.gz
+tar -xvzf storage_snap.tar.gz -C /root/0g-storage-node/run/db/
 mkdir -p /root/0g-storage-node/target/release
 wget http://195.201.198.8:12385/zgs_node
 mv zgs_node /root/0g-storage-node/target/release/zgs_node && chmod +x /root/0g-storage-node/target/release/zgs_node
